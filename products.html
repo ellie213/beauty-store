@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Products</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product {
+            display: inline-block;
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            background: #ffe4e1;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #ff1493;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Beauty Products</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="customers.html">Customers</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        <div id="products">
+            <div class="product">
+                <img src="lipstick.jpg" alt="Lipstick" style="width:100%; border-radius: 10px;">
+                <h2>Lipstick</h2>
+                <p>$10</p>
+                <button onclick="addToCart('Lipstick', '$10')" style="background-color:#ff69b4; color:white; padding:10px; border:none; border-radius:5px; cursor:pointer;">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

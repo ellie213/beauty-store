@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <style>
+        body {
+            background-color: #f0fff0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #ff1493;
+            font-weight: bold;
+        }
+        .order-list {
+            text-align: left;
+            margin-top: 20px;
+            padding: 10px;
+            background: #e6ffe6;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Orders</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="customers.html">Customers</a>
+            <a href="cart.html">Cart</a>
+            <a href="orders.html">Orders</a>
+        </div>
+        <div class="order-list">
+            <h2>All Orders</h2>
+            <ul id="orderDetails"></ul>
+        </div>
+    </div>
+    <script>
+        let ordersData = JSON.parse(localStorage.getItem("orders")) || [];
+        document.getElementById("orderDetails").innerHTML = ordersData.length ? 
+            ordersData.map(order => `<li>${order}</li>`).join('') : "No orders yet.";
+    </script>
+</body>
+</html>
